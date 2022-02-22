@@ -85,3 +85,60 @@ body{
 .title.active{
     display: none;
 }
+
+.input{
+    width: 6vW;
+    height: 6vw;
+    border-radius: 15px;
+    border: 2px solid rgb(165, 73, 7);
+}
+
+.input-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+label{
+    font-size: 25px;
+}
+
+.input-btn{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: calc( 10px + 1vw );
+    text-transform: uppercase;
+    font-weight: 550;
+    width: 10vw;
+    max-width: 100px;
+    height: 4vw;
+    max-height: 40px;
+    padding: 5px;
+    background-color:dodgerblue;
+    border-radius: 15px;
+    border: 3px solid rgb(14, 108, 202);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.input-btn:hover{
+    background-color: rgb(14, 108, 202);
+    transform: translateX(-50%) scale(1.03 , 1.03);
+    transition: all 300ms;
+}
+
+.input-action{
+    display: none;
+}
+
+.input-action.active{
+    display: block;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
