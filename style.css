@@ -27,6 +27,7 @@ body{
     justify-content: center;
     align-items: center;
     position: relative;
+    box-shadow: 5px 10px 15px rgb(90, 88, 88);
 }
 
 .numbers .title{
@@ -56,6 +57,7 @@ body{
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    box-shadow: 5px 10px 15px rgb(90, 88, 88);
 }
 
 .btn:hover{
@@ -64,3 +66,22 @@ body{
     transition: all 300ms;
 }
 
+.time{
+    font-size: calc( 45px + 3vw );
+}
+
+.time.active{
+    display: none;
+}
+
+.display-random-numbers.active{
+    display: none;
+}
+
+.btn.active{
+    display: none;
+}
+
+.title.active{
+    display: none;
+}
