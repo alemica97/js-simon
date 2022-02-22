@@ -18,7 +18,11 @@ function askNumbers(){
     do{
         let userNumbersToPush = parseInt(prompt('Vediamo se ti ricordi i 5 numeri che ti ho mostrato:'));
         console.log(userNumbersToPush);
-        userNumbers.push(userNumbersToPush);
+        if(!userNumbers.includes(userNumbersToPush)){
+            userNumbers.push(userNumbersToPush);
+        }else{
+            alert(`Hai già inserito ${userNumbersToPush}`);
+        }        
     }while(userNumbers.length < 5);
     console.log(userNumbers);
     //eseguo un ciclo per controllare quali numeri inseriti sono corretti
