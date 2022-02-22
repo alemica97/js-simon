@@ -6,9 +6,15 @@ do{
     console.log(numbersToPush);
     randomNumbers.push(numbersToPush);
 }while(randomNumbers.length < 5);
-//stampo i 5 numeri in pagina con un alert come da richiesta
-alert(randomNumbers);
 
+//stampo i 5 numeri in pagina con un alert come da richiesta
+// alert(randomNumbers);
+
+/*Sostituisco l'alert, e salvo in una variabile lo span "display-random-numbers" cosi da stampare
+in quest'ultimo i numeri random generati dal ciclo */
+const displayRandomNumbers = document.querySelector('.display-random-numbers');
+console.log(displayRandomNumbers);
+displayRandomNumbers.innerHTML = randomNumbers;
 
 //dichiaro un array che verrà riempito con i numeri inseriti dall'utente
 const userNumbers = [];
@@ -18,10 +24,10 @@ function askNumbers(){
     do{
         let userNumbersToPush = parseInt(prompt('Vediamo se ti ricordi i 5 numeri che ti ho mostrato:'));
         console.log(userNumbersToPush);
-        if(!userNumbers.includes(userNumbersToPush)){
+        if(!userNumbers.includes(userNumbersToPush) && !isNaN(userNumbersToPush) && userNumbersToPush <= 100){
             userNumbers.push(userNumbersToPush);
         }else{
-            alert(`Hai già inserito ${userNumbersToPush}`);
+            alert(`Forse hai già inserito ${userNumbersToPush}, oppure il numero non è valido poiché non è un numero o perché è maggiore di 100`);
         }        
     }while(userNumbers.length < 5);
     console.log(userNumbers);
