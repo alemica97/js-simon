@@ -89,7 +89,7 @@ function addUserNumber(){
         !isNaN(input1,input2,input3,input4,input5)){
             userNumbers.push(input1,input2,input3,input4,input5);
         }else{
-            alert(`Forse hai già inserito uno di questi numeri, oppure il numero non è valido poiché non è un numero o perché è maggiore di 100`);
+            return alert('Inserisci numeri validi!!');
         }        
     }while(userNumbers.length < 5);
     console.log(userNumbers);
@@ -110,7 +110,7 @@ function addUserNumber(){
         result.innerHTML = `Hai indovinato tutti i numeri !!`
         numbersContainer.classList.add('green');
     }else if(correctNumbers.length > 0 && correctNumbers.length < randomNumbers.length){
-        result.innerHTML = `Hai indovinato solo questi numeri: 
+        result.innerHTML = `Hai indovinato solo: 
                                 ${correctNumbers.join(', ')} !!`
         numbersContainer.classList.add('red');
     }else{
