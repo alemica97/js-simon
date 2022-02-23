@@ -1,3 +1,7 @@
+html{
+    font-family: 'Rubik', sans-serif;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -13,8 +17,19 @@ body{
     background-color: #333;
 }
 
+.title{
+    color: rgb(226, 226, 226);
+    font-size: calc(40px + 1vw);
+    text-transform: uppercase;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
 .numbers{
-    font-size: calc( 25px + 3vw );
+    font-size: calc( 35px + 1vw );
     width: 60vw;
     max-width: 1000px;
     height: 30vw;
@@ -24,20 +39,16 @@ body{
     border-radius: 15px;
     border: 5px solid rgb(165, 73, 7);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     position: relative;
     box-shadow: 5px 10px 15px rgb(90, 88, 88);
 }
 
-.numbers .title{
-    position: absolute;
-    top: -100px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: calc( 10px + 3vw );
+.numbers .subtitle{
+    font-size: calc( 20px + 1vw );
     white-space: nowrap;
-    margin-bottom: 20px;
 }
 
 .btn{
@@ -82,7 +93,7 @@ body{
     display: none;
 }
 
-.title.active{
+.subtitle.active{
     display: none;
 }
 
@@ -91,6 +102,7 @@ body{
     height: 6vw;
     border-radius: 15px;
     border: 2px solid rgb(165, 73, 7);
+    text-align: center;
 }
 
 .input-wrapper{
@@ -141,4 +153,24 @@ label{
     display: flex;
     justify-content: center;
     gap: 20px;
+}
+
+.result{
+    display: none;
+}
+
+.result.active{
+    text-transform: uppercase;
+    font-size: 25px;
+    display: block;
+}
+
+.numbers.green{
+    background-color:chartreuse;
+    border: 5px solid rgb(83, 167, 0);
+}
+
+.numbers.red{
+    background-color:crimson;
+    border: 5px solid rgb(141, 5, 33);
 }
