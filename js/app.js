@@ -29,7 +29,7 @@ console.log(startButton);
 const displaySeconds = document.querySelector('.time');
 // console.log(displaySeconds.innerHTML);
 //salvo il titolo in una variabile
-const title = document.querySelector('.title');
+const title = document.querySelector('.subtitle');
 console.log(title)
 //salvo gli input
 const inputNumber1 = document.getElementById('number1');
